@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    
+    <!--Import materialize.css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+            <div class="col s12 m7 l6">
+                  <div class="card">
+                    <div class="card-image h300">
+                      <img src="train.jpg">
+                      <span class="card-title"><i class="large material-icons">train</i></span>
+                    </div>
+                    <div class="card-content flow-text">
+                      <p>Need to catch a train?  Enter the train information below to track it.  You can even enter as many trains as you'd like!</p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="container">
+                <table class="table striped z-depth-4 blue accent-1">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(mins)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableRows">
+
+                    </tbody>
+                </table>
+            </div>
+        
+        <div class="container">
+            <br>
+            <h4><span class="blue-text text-darken-2">Add a train: </span></h4>
+            <div class="panel panel-body">
+                <form>
+                    <div class="form-group">
+                      <label for="name">Train Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="starTime">First Train Time (HH:MM -Military Time)</label>
+                        <input type="text" class="form-control" id="startTime" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Frequency (in minutes)</label>
+                        <input type="text" class="form-control" id="rate" placeholder="">
+                    </div>
+                    <button type="submit" class="btn blue accent-3" id="add-user">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <script src="script.js"></script>
+</body>
+
+</html>
